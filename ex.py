@@ -6,7 +6,7 @@ import traceback
 
 def getIp():
     # iplist get agent ip
-    ip_url = 'http://api.tianqiip.com/getip'
+    ip_url = 'http://api.getip.com/getip'
     res = requests.get(ip_url)
     print(res.text)
     ip_json = json.loads(res.text)
@@ -19,7 +19,7 @@ def getIp():
 
 def getHead(request_length):
     return {"Content-Type": "application/json", "Content-Length": str(request_length),
-            "Host": "gateway.jiangongdata.com",
+            "Host": "api.myip.com",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36",
             "Accept": "*/*", "Connection": "keep-alive"}
 
